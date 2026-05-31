@@ -64,28 +64,86 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HairSalon",
+  "@type": "Organization",
   "name": "Haargarten",
   "alternateName": "Haargarten Terminbuchung",
   "url": "https://haargarten.shop",
-  "description": "Kostenlose Online-Terminbuchung für Friseure, Coiffeursalons und Barbershops. Unisex.",
+  "description": "Kostenlose Online-Terminbuchungsplattform für Friseure, Coiffeursalons und Barbershops in Deutschland. Unisex. Einfach. Schnell. Keine versteckten Kosten.",
   "image": "https://haargarten.shop/landing.png",
-  "telephone": "+49-",
-  "areaServed": "DE",
-  "priceRange": "Kostenlos",
-  "knowsAbout": ["Friseur Terminbuchung", "Coiffeur Buchungssystem", "Barbershop Termine", "Online Booking Hair Salon"],
+  "email": "hello@haargarten.shop",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Deutschland",
+    "sameAs": "https://de.wikipedia.org/wiki/Deutschland"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Berlin",
+    "addressRegion": "Berlin",
+    "addressCountry": "DE"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "hello@haargarten.shop",
+    "contactType": "customer support",
+    "availableLanguage": ["German", "English"]
+  },
+  "foundingDate": "2026",
+  "legalName": "Haargarten GmbH",
+  "knowsAbout": [
+    "Friseur Terminbuchung",
+    "Coiffeur Buchungssystem",
+    "Barbershop Termine",
+    "Online Booking Hair Salon",
+    "Terminmanagement Friseur",
+    "Friseur Software"
+  ],
   "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "EUR",
-    "description": "Kostenlose Terminbuchung für Friseursalons",
-    "availability": "https://schema.org/PreOrder"
+    "description": "Kostenlose Terminbuchungsplattform für Friseursalons",
+    "availability": "https://schema.org/PreOrder",
+    "eligibleCustomerType": "Business",
+    "businessFunction": "https://schema.org/ProvideService"
   },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://haargarten.shop/suche?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
+  "sameAs": [
+    "https://haargarten.shop"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Haargarten",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description": "Kostenlose Online-Terminbuchungsplattform speziell für Friseure, Coiffeursalons und Barbershops. Kunden können rund um die Uhr Termine buchen. Automatische Erinnerungen. Unisex. Keine Installation nötig.",
+  "url": "https://haargarten.shop",
+  "image": "https://haargarten.shop/landing.png",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "description": "Kostenlose Terminbuchung für Friseursalons – für immer kostenlos"
+  },
+  "applicationSubCategory": "Terminbuchung",
+  "browserRequirements": "JavaScript, HTML5",
+  "countriesSupported": "DE",
+  "availableOnDevice": "WebBrowser",
+  "featureList": [
+    "Online-Terminbuchung 24/7",
+    "Automatische E-Mail-Erinnerungen",
+    "Keine Installation",
+    "Unisex Buchung",
+    "Kostenlos für Salons und Kunden",
+    "Terminmanagement"
+  ],
+  "screenshot": "https://haargarten.shop/landing.png",
+  "releaseNotes": "Launch am 31. Juli 2026",
+  "datePublished": "2026-07-31"
 }
 </script>
 
@@ -97,7 +155,10 @@
   "url": "https://haargarten.shop",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://haargarten.shop/suche?q={search_term_string}",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://haargarten.shop/suche?q={search_term_string}"
+    },
     "query-input": "required name=search_term_string"
   }
 }
